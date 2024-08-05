@@ -204,6 +204,17 @@ function generateAnalysing() {
                 if (tbEl) {
                     tbEl.innerHTML = generatedHtml;
 
+                    // Добавляем обработчик событий для кнопок удаления
+                    tbEl.addEventListener('click', function (e) {
+                        if (e.target.classList.contains('delete-bet')) {
+                            const betElement = e.target.closest('.table-element');
+                            const betId = betElement.dataset.id;
+                            if (confirm('Are you sure you want to delete this bet?')) {
+                                deleteBet(betId);
+                            }
+                        }
+                    });
+
                     const paginationContainer = document.querySelector('.pag');
                     if (paginationContainer) {
                         const totalPages = Math.ceil(data.length / elementsPerPage);
@@ -240,21 +251,20 @@ function generateAnalysing() {
 function createTableElement(item) {
     const resultColor = item.result === 'Win' ? '#2ACC35' : 'red';
     return `
-        <div class="table-element">
-            ${Object.entries(item).map(([key, value]) => {
-        const isNumeric = !isNaN(value) && typeof value === 'number';
-        if (key === 'result') {
-            return `<div class="${key}" style="color: ${resultColor}">${value}</div>`;
-        }
-        return `<div class="${key} ${isNumeric ? 'anton-font' : ''}">${value}</div>`;
-    }).join('')}
+        <div class="table-element" data-id="${item.id}">
+            ${Object.entries(item)
+            .filter(([key]) => key !== 'id') // Исключаем id из вывода
+            .map(([key, value]) => {
+                const isNumeric = !isNaN(value) && typeof value === 'number';
+                if (key === 'result') {
+                    return `<div class="${key}" style="color: ${resultColor}">${value}</div>`;
+                }
+                return `<div class="${key} ${isNumeric ? 'anton-font' : ''}">${value}</div>`;
+            }).join('')}
+            <div class="delete-bet">✖</div>
         </div>
     `;
-
-
-
 }
-
 function updateStatistics(data) {
     const alltimeProf = calculateAllTimeProfit(data);
     const betsSum = calculateBetsSum(data);
@@ -296,4 +306,25 @@ function calculateWinrate(data) {
 
     const wins = data.filter(bet => bet.result === 'Win').length;
     return (wins / data.length) * 100;
+}
+
+function deleteBet(id) {
+    fetch(`http://localhost:3000/api/bets/${id}`, {
+        method: 'DELETE',
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            console.log('Success:', data);
+            // Обновляем отображение после удаления
+            generateAnalysing();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Failed to delete bet. Please try again.');
+        });
 }

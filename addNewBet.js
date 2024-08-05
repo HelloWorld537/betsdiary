@@ -56,6 +56,7 @@ function addNewBet() {
         newBet.coef = parseFloat(newBet.coef);
         newBet.sum = parseInt(newBet.sum);
         newBet.bet_date = today;
+        newBet.id = Date.now(); // Добавляем уникальный id
 
         fetch('http://localhost:3000/api/bets', {
             method: 'POST',

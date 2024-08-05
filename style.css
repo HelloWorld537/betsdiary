@@ -626,3 +626,21 @@ a {
 .tournament {
   margin-left: -10px;
 }
+
+.delete-bet {
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.table-element {
+  position: relative;
+}
+
+.delete-bet {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
