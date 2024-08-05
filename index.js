@@ -3,6 +3,12 @@ const rightPanel = document.querySelector('.right-panel');
 
 let balance = 500;
 
+function updateBalance(newBalance) {
+    balance = newBalance;
+    // Здесь можно добавить код для обновления отображения баланса на главной странице, если это необходимо
+}
+
+
 // Функция для создания шаблона профитов
 
 // Функция для создания шаблона новостей
@@ -23,7 +29,7 @@ function createNewsItems(newsArray) {
 
 
 
-
+window.updateBalance = updateBalance;
 
 // Функция для генерации панели Analysing
 
