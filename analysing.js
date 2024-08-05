@@ -123,7 +123,7 @@ function generateAnalysing() {
         return paginationHtml;
     }
 
-    fetch('db.json')
+    fetch('http://localhost:3000/api/bets')
         .then(response => response.json())
         .then(data => {
             function applyFilters(data) {

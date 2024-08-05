@@ -1,6 +1,6 @@
 // Функция для генерации панели Dashboard с динамическим винрейтом и профитом
 function generateDashboard() {
-    fetch('db.json')
+    fetch('http://localhost:3000/api/bets')
         .then(response => response.json())
         .then(data => {
             const winrate = calculateWinrate(data);

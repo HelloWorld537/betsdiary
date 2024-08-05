@@ -53,41 +53,43 @@ function addNewBet() {
         const formData = new FormData(this);
         const newBet = Object.fromEntries(formData.entries());
 
-        // Convert numeric fields to numbers and add bet_date
         newBet.coef = parseFloat(newBet.coef);
         newBet.sum = parseInt(newBet.sum);
         newBet.bet_date = today;
 
-        console.log('New bet to be added:', newBet);
-
-        fetch('db.json')
-            .then(response => response.json())
-            .then(data => {
-                console.log('Current data:', data);
-                data.push(newBet);
-                console.log('Updated data:', data);
-                return fetch('db.json', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
-            })
+        fetch('http://localhost:3000/api/bets', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newBet)
+        })
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                    throw new Error('Network response was not ok');
                 }
                 return response.text();
             })
-            .then(text => {
-                console.log('Server response:', text);
+            .then(data => {
+                console.log('Success:', data);
                 alert('Bet added successfully!');
                 // Optionally, refresh the dashboard or bet list here
+                updateBetsDisplay();
             })
-            .catch(error => {
+            .catch((error) => {
                 console.error('Error:', error);
                 alert('Failed to add bet. Please try again.');
             });
     });
+}
+
+// Function to update bets display
+function updateBetsDisplay() {
+    fetch('http://localhost:3000/api/bets')
+        .then(response => response.json())
+        .then(bets => {
+            console.log('Updating bets display with:', bets);
+            // Here you can update the bets display on the page
+        })
+        .catch(error => console.error('Error:', error));
 }
