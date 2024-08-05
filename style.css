@@ -1,0 +1,571 @@
+/* accent color #2ACC35 */
+
+
+.anton-font {
+  font-family: 'Anton', sans-serif;
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+
+/* Стили для всех элементов скроллбара */
+::-webkit-scrollbar {
+  width: 8px;
+  /* Ширина скроллбара */
+  height: 8px;
+  /* Высота скроллбара */
+}
+
+
+
+/* Стили для трека скроллбара */
+::-webkit-scrollbar-track {
+  background: #222;
+  /* Цвет фона трека */
+  border-radius: 10px;
+  /* Радиус скругления трека */
+}
+
+/* Стили для бегунка скроллбара */
+::-webkit-scrollbar-thumb {
+  background: #555;
+  /* Цвет бегунка */
+  border-radius: 10px;
+  /* Радиус скругления бегунка */
+}
+
+/* Стили для бегунка при наведении */
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+  /* Цвет бегунка при наведении */
+}
+
+
+@font-face {
+  font-family: 'Anton';
+  src: url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+  font-style: normal;
+  font-weight: 400;
+}
+
+.green {
+  color: #2ACC35;
+}
+
+.active {
+  color: #2ACC35 !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #070319;
+  color: #fff;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Annie Use Your Telescope';
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+header {
+  border-bottom: 2px solid #2ACC35;
+
+  padding: 20px;
+  text-align: center;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  position: relative;
+  margin-top: 20px;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header svg {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+
+}
+
+svg path {
+
+  fill: #2ACC35;
+
+}
+
+.logo {
+  font-family: 'Anton';
+  font-weight: bold;
+  font-size: 40px;
+  font-family: "Annie Use Your Telescope";
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+.logo span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.num {
+  font-family: 'Anton';
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.dayweek {
+  font-size: 19px;
+  text-align: center;
+  margin-left: -45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.left-panel {
+  width: 17%;
+  border-right: 1px solid #2ACC35;
+  text-align: right;
+  font-family: 'Annie Use Your Telescope';
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+
+
+.left-panel a {
+
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 17px;
+
+  text-align: left;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  font-size: 18px;
+
+}
+
+.content {
+  display: flex;
+  width: 100%;
+}
+
+.right-panel {
+  width: 85%;
+}
+
+.right-panel>*:first-child {
+  display: flex;
+}
+
+.right-p {
+  padding-left: 30px;
+}
+
+/*DASHBOARD ---------------------------------------------------------*/
+
+.dashboard {
+  width: 100%;
+  text-align: center;
+}
+
+.dashboard .left-side {
+  width: 70%;
+  padding-left: 40px;
+  padding-right: 40px;
+
+
+}
+
+.dashboard .right-side {
+  width: 30%;
+}
+
+.dashboard .top-profit {
+  display: flex;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.dashboard .balance-wrapper,
+.roi-wrapper {
+  display: block;
+}
+
+.dashboard .balance-wrapper,
+.roi-wrapper {
+  width: 50%;
+}
+
+.dashboard .left-side-profit {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.dashboard .left-side-profit>* {
+  width: 50%
+}
+
+.dashboard .wrp {
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.dashboard .label {
+  font-size: 30px;
+  font-family: 'Annie Use Your Telescope';
+  position: relative;
+
+}
+
+.dashboard .sum {
+  font-family: 'Anton';
+  font-size: 33px;
+  letter-spacing: 2px;
+}
+
+.dashboard .news {
+  border-left: 1px solid #2ACC35;
+  padding-left: 30px;
+  padding-right: 20px;
+  max-height: 420px;
+  overflow-y: scroll;
+}
+
+.dashboard .news .heading {
+  font-size: 30px;
+  font-weight: bold;
+
+  color: #2ACC35;
+}
+
+
+.dashboard .news-item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.dashboard .news-item .news-item-heading {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+/* Analysing ----------------------------------------------------------*/
+.analysing {
+  width: 100%;
+  display: block !important;
+
+
+}
+
+.analysing .heading {
+  font-size: 30px;
+  font-family: 'Annie Use Your Telescope';
+  margin-bottom: 50px;
+  padding-left: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.analysing .table {
+  padding-left: 30px;
+}
+
+.analysing .table .table-element {
+  display: flex;
+  border-bottom: 1px solid rgba(222, 222, 222, .7);
+  margin-bottom: 30px;
+}
+
+.analysing .table .table-element:last-child {
+  display: flex;
+  border-bottom: none !important;
+  margin-bottom: 30px;
+}
+
+.analysing .table .table-element>div {
+  margin-right: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border-right: 2px solid #fff;
+
+  padding-right: 20px;
+}
+
+.analysing .filters {
+  margin-bottom: 20px;
+  padding-left: 30px;
+  /* Отступ слева */
+  padding-right: 10px;
+  /* Отступ справа */
+}
+
+.analysing .filters-heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.analysing .filter-item {
+  flex: 1 0 calc(20% - 10px);
+  /* Уменьшаем до 20% для 5 элементов в ряд */
+  min-width: 50px;
+  /* Уменьшаем минимальную ширину */
+  max-width: 70px;
+  /* Добавляем максимальную ширину */
+  position: relative;
+  margin-right: 15px
+}
+
+.analysing .filter-item label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.analysing .filter-item select {
+  width: 100%;
+  padding: 6px 25px 6px 10px;
+  /* Уменьшаем padding */
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 13px;
+  /* Уменьшаем размер шрифта */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.analysing .filter-item select:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.analysing .filter-item select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(42, 204, 53, 0.5);
+}
+
+/* Стрелка для выпадающего списка */
+
+
+/* Стили для опций внутри select */
+.analysing .filter-item select option {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1200px) {
+  .analysing .filter-item {
+    flex: 1 0 calc(25% - 10px);
+    /* 4 элемента в ряд */
+  }
+}
+
+@media (max-width: 992px) {
+  .analysing .filter-item {
+    flex: 1 0 calc(33.333% - 10px);
+    /* 3 элемента в ряд */
+  }
+}
+
+@media (max-width: 768px) {
+  .analysing .filter-item {
+    flex: 1 0 calc(50% - 10px);
+    /* 2 элемента в ряд */
+  }
+}
+
+@media (max-width: 576px) {
+  .analysing .filter-item {
+    flex: 1 0 100%;
+    /* 1 элемент в ряд */
+  }
+}
+
+.discipline {
+  min-width: 60px;
+}
+
+.day {
+  margin-bottom: 20px;
+  display: flex;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: 'Anton';
+  border-bottom: 1px solid #2ACC35;
+  margin-bottom: 30px;
+}
+
+.pag {
+  display: flex;
+  padding-left: 30px;
+  text-align: center;
+  width: 100%;
+
+  margin-right: 40px;
+
+
+}
+
+.pag .page {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: 'Anton';
+
+}
+
+.day-numb {
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.right-p {
+  display: flex;
+
+  margin-right: -10px;
+}
+
+.right-p>div {
+  margin-right: 20px;
+}
+
+.text {
+  font-family: 'Annie Use Your Telescope';
+}
+
+.result {
+  font-weight: bold !important;
+  font-size: 20px !important;
+  width: 53px;
+  text-align: center;
+
+}
+
+.table-elements {
+  height: 250px;
+}
+
+.page {
+  cursor: pointer;
+
+}
+
+a {
+  cursor: pointer;
+}
+
+
+
+.memorandum {
+
+  display: block !important;
+  padding-left: 30px;
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.7;
+  text-align: left;
+  height: 440px;
+  overflow-y: scroll;
+
+}
+
+.memorandum p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+
+}
+
+#coef-filter,
+#sum-filter {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 80px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.coef {
+  width: 58px;
+  text-align: center;
+}
+
+.tournament {
+  width: 30px !important;
+  font-size: 10px !important;
+}
+
+.commands {
+  width: 50px;
+  font-size: 10px !important;
+}
+
+.bet {
+  width: 90px !important;
+  font-size: 10px !important;
+}
+
+.sum {
+  width: 60px !important;
+  text-align: center;
+}
+
+.balance-wrapper {
+  text-align: center !important;
+}
+
+.roi,
+.balance,
+.profit-week,
+.profit-all,
+.profit-month,
+.winrate {
+  width: 100% !important;
+  text-align: center;
+}
+
+.profit,
+.winrate,
+.bets-calc {
+  white-space: nowrap;
+}
+
+.commands,
+.bet,
+.tournament {
+  text-align: center;
+}
+
+.tournament {
+  margin-left: -10px;
+}
