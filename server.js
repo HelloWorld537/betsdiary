@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3000;
+const host = process.env.HOST || '0.0.0.0'; // Listen on all interfaces by default
 
 app.use(cors());
 app.use(express.json());
