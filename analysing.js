@@ -123,7 +123,7 @@ function generateAnalysing() {
         return paginationHtml;
     }
 
-    fetch('https://betsdiary.vercel.app/api/bets')
+    fetch('https://betsdiary.onrender.com/api/bets')
         .then(response => response.json())
         .then(data => {
             function applyFilters(data) {

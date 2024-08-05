@@ -58,7 +58,7 @@ function addNewBet() {
         newBet.bet_date = today;
         newBet.id = Date.now(); // Добавляем уникальный id
 
-        fetch('https://betsdiary.vercel.app/api/bets', {
+        fetch('https://betsdiary.onrender.com/api/bets', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
