@@ -1,22 +1,3 @@
 [
-    {
-        "discipline": "Dota",
-        "tournament": "International",
-        "commands": "Navis Vs Fnatic",
-        "bet": "Navi Twoway",
-        "coef": 2.77,
-        "sum": 44,
-        "result": "Win",
-        "bet_date": "04.08.2024"
-    },
-    {
-        "discipline": "CS",
-        "tournament": "International",
-        "commands": "Navis Vs Fnatic",
-        "bet": "Navi Twoway",
-        "coef": 2.77,
-        "sum": 44,
-        "result": "Win",
-        "bet_date": "01.08.2024"
-    }
+   
 ]
