@@ -1,5 +1,5 @@
 function addNewBet() {
-    const today = new Date().toLocaleDateString('ru-RU'); // Get current date in DD.MM.YYYY format
+    const today = new Date().toLocaleDateString('ru-RU');
 
     rightPanel.innerHTML = `
         <div class="add-bet-form">
@@ -47,7 +47,6 @@ function addNewBet() {
         </div>
     `;
 
-    // Add event listener to the form
     document.getElementById('newBetForm').addEventListener('submit', function (e) {
         e.preventDefault();
         const formData = new FormData(this);
@@ -74,7 +73,7 @@ function addNewBet() {
             .then(data => {
                 console.log('Success:', data);
                 alert('Bet added successfully!');
-                // Optionally, refresh the dashboard or bet list here
+                // Опционально: обновите отображение ставок на странице
                 updateBetsDisplay();
             })
             .catch((error) => {
@@ -84,13 +83,13 @@ function addNewBet() {
     });
 }
 
-// Function to update bets display
+// Функция для обновления отображения ставок
 function updateBetsDisplay() {
-    fetch('http://localhost:3000/api/bets')
+    fetch('https://betsdiary.onrender.com/api/bets')
         .then(response => response.json())
         .then(bets => {
             console.log('Updating bets display with:', bets);
-            // Here you can update the bets display on the page
+            // Здесь вы можете обновить отображение ставок на странице
         })
         .catch(error => console.error('Error:', error));
 }

@@ -309,7 +309,7 @@ function calculateWinrate(data) {
 }
 
 function deleteBet(id) {
-    fetch(`http://localhost:3000/api/bets/${id}`, {
+    fetch(`/${id}`, {
         method: 'DELETE',
     })
         .then(response => {
