@@ -28,11 +28,11 @@ function addNewBet() {
                 </div>
                 <div class="form-group">
                     <label for="coef">Coef:</label>
-                    <input type="number" id="coef" name="coef" step="0.01" required>
+                    <input type="text" id="coef" name="coef" required>
                 </div>
                 <div class="form-group">
                     <label for="sum">Sum:</label>
-                    <input type="number" id="sum" name="sum" step="1" required>
+                    <input type="text" id="sum" name="sum"  required>
                 </div>
                 <div class="form-group">
                     <label for="result">Result:</label>
